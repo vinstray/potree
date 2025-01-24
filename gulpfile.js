@@ -76,12 +76,12 @@ let shaders = [
 
 // For development, it is now possible to use 'gulp webserver'
 // from the command line to start the server (default port is 8080)
-// gulp.task('webserver', gulp.series(async function() {
-//	server = connect.server({
-//		port: 1234,
-//		https: false,
-//	});
-// }));
+gulp.task('webserver', gulp.series(async function() {
+	server = connect.server({
+		port: 8080,
+		https: true,
+	});
+}));
 
 gulp.task('webserver', gulp.series(async function() {
     const port = process.env.PORT || 1234; // Use Azure's PORT or fallback to 1234
