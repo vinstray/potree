@@ -58,5 +58,5 @@ jobs:
         with:
           app-name: 'geomaticslab'
           slot-name: 'Production'
-          package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_615A7FA3FA9B4F02BD8946859460E5B9 }}
+          package: ./build
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
