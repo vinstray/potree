@@ -79,18 +79,11 @@ let shaders = [
 gulp.task('webserver', gulp.series(async function() {
 	server = connect.server({
 		port: 8080,
-		https: true,
+		https: false,
 	});
 }));
 
-gulp.task('webserver', gulp.series(async function() {
-    const port = process.env.PORT || 1234; // Use Azure's PORT or fallback to 1234
-    server = connect.server({
-        port: port, // Dynamically use the assigned port
-        https: false,
-    });
-    console.log(`Server running on port ${port}`);
-}));
+
 
 gulp.task('examples_page', async function(done) {
 	await Promise.all([
